@@ -1,10 +1,13 @@
-var express = require('express');
-var router = express.Router();
-var render = require('../utilities/render.js');
+var fs = require('fs-extra');
+var routesFolder = './routes';
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  render(res, 'index');
-});
+var loadRoutes = function (app) {
+  var files = fs.readdirSync(routesFolder);
 
-module.exports = router;
+  files.filter(file => file !== 'index.js').forEach((file) => {
+    var router = require('./' + file);
+    app.use(router.basePath, router.router);
+  });
+}
+
+module.exports = loadRoutes;
