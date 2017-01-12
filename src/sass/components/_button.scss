@@ -1,0 +1,26 @@
+.button {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 0;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-radius: 4px;
+}
+
+.icon-button {
+  border: 0;
+  background: none;
+}
+
+.primary-button {
+  @extend .button;
+  color: $white;
+  background-color: #3097D1;
+  border-color: #2a88bd;
+}

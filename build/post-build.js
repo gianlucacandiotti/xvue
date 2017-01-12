@@ -1,8 +1,8 @@
 var replace = require("replace")
 
 replace({
-  regex: "\"(\\/static.+?(.js|.css))\"",
-  replacement: "\"{{ asset('$1') }}\"",
-  paths: ['resources/views/layouts/base.blade.php'],
+  regex: "<script type=text/javascript src=%DEV_PATH%/app.js></script>",
+  replacement: "",
+  paths: ['views/layouts/base.dust'],
   silent: true
 })

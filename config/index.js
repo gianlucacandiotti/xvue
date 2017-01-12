@@ -18,6 +18,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
+    basePath: 'http://xvue.app',
     port: 8080,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',

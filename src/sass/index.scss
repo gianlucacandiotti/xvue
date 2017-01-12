@@ -1,8 +1,25 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+// Vendor
 
-a {
-  color: #00B7FF;
-}
+@import "vendor/normalize";
+
+// Commons
+
+@import "commons/index";
+
+// Base
+
+@import "base/base";
+@import "base/typography";
+
+// Utilities
+
+@import "utilities/helpers";
+@import "utilities/animations";
+
+// Theme
+
+@import "theme/theme";
+
+// Components
+
+@import "components/index";

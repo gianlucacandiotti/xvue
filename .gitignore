@@ -3,3 +3,5 @@
 /dist
 npm-debug.log
 /test/unit/coverage
+/public/static
+/views/layouts/base.dust

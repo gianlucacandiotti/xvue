@@ -1,0 +1,61 @@
+/* Breakpoints */
+
+$xs-max: 47.938em !default; // 767px
+$sm-min: 48.000em !default; // 768px
+$sm-max: 61.938em !default; // 991px
+$md-min: 62.000em !default; // 992px
+$md-max: 74.938em !default; // approx 1199px
+$lg-min: 75.000em !default; // approx 1200px
+
+/* Brand */
+
+$blue:              #4078c0 !default;
+$gray-dark:         #333    !default;
+$gray-light:        #d3e0e9    !default;
+$gray:              #636b6f !default;
+$green:             #6cc644 !default;
+$orange:            #c9510c !default;
+$purple:            #6e5494 !default;
+$red:               #bd2c00 !default;
+$white:             #fff !default;
+
+/* Background colors */
+
+$bg-blue-light:     #f2f8fa !default;
+$bg-blue:           $blue !default;
+$bg-gray-dark:      $gray-dark !default;
+$bg-gray-light:     #fafafa !default;
+$bg-gray:           #f5f5f5 !default;
+$bg-green:          $green !default;
+$bg-orange:         $orange !default;
+$bg-purple:         $purple !default;
+$bg-red:            $red !default;
+$bg-white:          $white !default;
+
+/* Text colors */
+
+$text-blue:         $blue !default;
+$text-gray-dark:    $gray-dark !default;
+$text-gray-light:   $gray-light !default;
+$text-gray:         $gray !default;
+$text-green:        darken($green, 10%) !default;
+$text-orange:       $orange !default;
+$text-purple:       $purple !default;
+$text-red:          $red !default;
+$text-white:        $white !default;
+
+/* Fonts */
+
+$lh-condensed-ultra: 1 !default;
+$lh-default: 1.2 !default;
+
+$font-weight-bold: 600 !default;
+$font-weight-light: 300 !default;
+
+/* Body */
+
+$body-background-color: #f5f8fa;
+$body-color: $gray;
+$body-font: 'Raleway', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$body-font-size: 14px !default;
+$body-line-height: $lh-default !default;

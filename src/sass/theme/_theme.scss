@@ -1,0 +1,33 @@
+/* ==========================================================================
+   This file should contain styles the are global to a context. For example,
+   if we had a Dashboard and an Application inside this project, we would create
+   a theme file for each of them.
+   ========================================================================== */
+
+.section {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.container {
+  padding: 0 15px;
+
+  @include breakpoint(sm) {
+    margin: 0 auto;
+    max-width: 750px;
+  }
+
+  @include breakpoint(md) {
+    max-width: 970px;
+  }
+
+  @include breakpoint(lg) {
+    max-width: 1170px;
+  }
+}
+
+&.flex-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}

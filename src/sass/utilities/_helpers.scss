@@ -1,0 +1,49 @@
+/* Global helpers */
+
+.is-hidden    { display:    none !important; }
+.is-invisible { visibility: none !important; }
+
+.block        { display: block        !important; }
+.inline       { display: inline       !important; }
+.inline-block { display: inline-block !important; }
+.flex         { display: flex         !important; }
+
+.weight-300 { font-weight: 300 !important; }
+.weight-400 { font-weight: 400 !important; }
+.weight-500 { font-weight: 500 !important; }
+.weight-600 { font-weight: 600 !important; }
+.weight-700 { font-weight: 700 !important; }
+
+.font-normal { font-style: normal; }
+.font-italic { font-style: italic; }
+.font-oblique { font-style: oblique; }
+
+.relative { position: relative !important; }
+.absolute { position: absolute !important; }
+
+.left  { float: left  !important; }
+.right { float: right !important; }
+
+.vertical-top     { vertical-align: top    !important; }
+.vertical-middle  { vertical-align: middle !important; }
+.vertical-bottom  { vertical-align: bottom !important; }
+
+.text-left   { text-align: left   !important; }
+.text-center { text-align: center !important; }
+.text-right  { text-align: right  !important; }
+
+.decoration-underline { text-decoration: underline !important; }
+.cursor-pointer { cursor: pointer !important; }
+
+.mt0 { margin-top:    0   !important; }
+.mt1 { margin-top:    1em !important; }
+.mb0 { margin-bottom: 0   !important; }
+.mb1 { margin-bottom: 1em !important; }
+
+.justify-content-center        { justify-content: center        !important; }
+.justify-content-space-around  { justify-content: space-around  !important; }
+.justify-content-space-between { justify-content: space-between !important; }
+
+.align-items-flex-start  { align-items: flex-start !important; }
+
+.cursor-pointer{ cursor: pointer !important; }

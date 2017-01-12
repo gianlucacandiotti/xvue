@@ -1,0 +1,75 @@
+/* ==========================================================================
+   This file only targets tags directly and gives some basic styling to them.
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body {
+  background-color: $body-background-color;
+  color: $body-color;
+  font-family: $body-font;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+}
+
+a {
+  color: $text-blue;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+/* Horizontal lines */
+
+hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  @include clearfix();
+}
+
+/* Remove most spacing between table cells */
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}

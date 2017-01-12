@@ -63,7 +63,14 @@ app.use(hotMiddleware)
 
 // serve pure static assets
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
-app.use(staticPath, express.static('./static'))
+app.use(staticPath, express.static('./static', {
+  setHeaders: function (res, path, stat) {
+    res.set('Access-Control-Allow-Origin', '*')
+    res.set('Access-Control-Request-Method', '*')
+    res.set('Access-Control-Allow-Methods', 'OPTIONS, GET')
+    res.set('Access-Control-Allow-Headers', '*')
+  }
+}))
 
 var uri = 'http://localhost:' + port
 

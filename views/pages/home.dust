@@ -1,5 +1,5 @@
 {>"layouts/base"/}
 
 {<content}
-<div id="hello-world"></div>
+<div id="hello"></div>
 {/content}
