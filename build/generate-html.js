@@ -1,27 +1,45 @@
-var app = require('../app')
+require('dotenv').config()
+var path = require('path')
+var fs = require('fs-extra')
+var replace = require("replace")
+var wget = require('wget')
+var routes = require('../config/routes')
 
-var route, routes = []
-var reg = /\/\^\/(.*)\/\?\(\?\=\/\|\$\)\/i/;
+var baseUrl = process.env.HOST + ':' + process.env.EXPRESS_PORT
+var htmlFolderPath = path.resolve(__dirname, '../html')
 
-app._router.stack.forEach(function (middleware) {
-    if (middleware.route) { // routes registered directly on the app
-        routes.push(middleware.route);
-    } else if(middleware.name === 'router') { // router middleware
-      console.log(Object.keys(middleware.regexp));
-      var basePath = '';
-      console.log(typeof middleware.regexp);
-      if (typeof middleware.regexp === 'object')
-        basePath += '/';
-      else {
-        var match = middleware.regexp.match(reg);
-        basePath += match[1] + '/';
+fs.emptyDirSync(path.resolve(htmlFolderPath))
+fs.ensureFileSync(path.resolve(htmlFolderPath, './index.html'))
+
+routes.forEach(function (route) {
+  var sRoute = route === '/' ? '' : route;
+  fs.ensureDirSync(path.resolve(htmlFolderPath, '.' + sRoute))
+
+  var download = wget.download(baseUrl + sRoute, 'html' + sRoute + '/index.html')
+
+  download.on('error', function (err) {
+      console.log(err)
+  })
+
+  download.on('end', function (output) {
+      console.log(output)
+
+      var depth = output.split('/').length - 2
+      var backFolder = '../'
+
+      for (; depth > 0; depth--) {
+        backFolder += '../'
       }
 
-      middleware.handle.stack.forEach(function (handler){
-          route = handler.route;
-          route && routes.push((basePath + route).replace(/\/$/, ''));
-      });
-    }
-});
+      setTimeout(function(){
+        replace({
+          regex: '(\/static.+?(.js|.css))',
+          replacement: backFolder + 'public$1',
+          paths: [output],
+          silent: true
+        })
+      }, 1000)
+  })
+})
 
-console.log(routes)
+

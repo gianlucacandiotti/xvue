@@ -1,7 +1,10 @@
+.env
 /node_modules
 .DS_Store
 /dist
 npm-debug.log
 /test/unit/coverage
 /public/static
+/build/dev-client.js
 /views/layouts/base.dust
+/html

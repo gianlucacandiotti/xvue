@@ -1,11 +1,12 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
+require('dotenv').config()
 var path = require('path')
 
 module.exports = {
   build: {
     env: require('./prod.env'),
-    index: path.resolve(__dirname, '../views/layouts/base.dust'),
-    assetsRoot: path.resolve(__dirname, '../public'),
+    index: path.resolve(__dirname, '../dist/index.html'),
+    assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: true,
@@ -18,8 +19,8 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    basePath: 'http://xvue.app',
-    port: 8080,
+    baseUrl: process.env.HOST,
+    port: process.env.WEBPACK_PORT || 8080,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},
