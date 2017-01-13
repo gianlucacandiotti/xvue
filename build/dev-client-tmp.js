@@ -1,6 +1,6 @@
 /* eslint-disable */
 require('eventsource-polyfill')
-var hotClient = require('webpack-hot-middleware/client?path=%DEV_PATH%/__webpack_hmr&noInfo=true&reload=true')
+var hotClient = require('webpack-hot-middleware/client?path=__webpack_hmr&noInfo=true&dynamicPublicPath=true&reload=true')
 
 hotClient.subscribe(function (event) {
   if (event.action === 'reload') {

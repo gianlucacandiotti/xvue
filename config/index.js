@@ -20,9 +20,9 @@ module.exports = {
   dev: {
     env: require('./dev.env'),
     baseUrl: process.env.HOST,
-    port: process.env.WEBPACK_PORT || 8080,
+    port: process.env.WEBPACK_PORT,
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: process.env.HOST + ':' + process.env.WEBPACK_PORT + '/',
     proxyTable: {},
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
