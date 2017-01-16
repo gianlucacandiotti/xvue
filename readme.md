@@ -15,7 +15,7 @@ I'm a Front End developer often starting new projects and really liked the vue-c
 
 You are all set to go. Now you may just run the commands below to start developing !
 
-## How can I start coding with everything you have mentioned ?
+## What's included
 
 These are the tasks included in the template. I'll just copy most of the descriptions from the [Vuejs Webpack template](https://github.com/vuejs-templates/webpack) since this is the template I merged with Express. If you want to know anything else about the tasks, about the folder structure or how to change or extend anything refer to their [docs](http://vuejs-templates.github.io/webpack/).
 
