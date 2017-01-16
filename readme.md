@@ -11,7 +11,7 @@ I'm a Front End developer often starting new projects and really liked the vue-c
 1. `git clone https://github.com/gianlucacandiotti/xvue.git PROJECT_NAME`.
 2. `cd PROJECT_NAME && yarn` (or `npm install` if that suites you better).
 3. `cp .env-example .env`
-4. Modify your .env file to have the HOST variable be the same as your projects url (localhost by default).
+4. Modify your .env file to have the HOST variable be the same as your project's url (localhost by default).
 
 You are all set to go. Now you may just run the commands below to start developing !
 
