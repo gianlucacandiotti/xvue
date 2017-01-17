@@ -4,7 +4,7 @@ This is an Express template I plan to use for my own projects. It's still work i
 
 ## Why did you do this ?
 
-I'm a Front End developer often starting new projects and felt like an Express.js template with decent configuration for Vue.js was missing. Most tools for scaffolding out there are configured for SPAs and it's not always the use case. So I setted up this project that is kind of a merge between an express generated app and the configuration of the vue-webpack template and the create-react-app project for my future use. It has [Dust.js](http://www.dustjs.com/) as its template engine.
+I'm a Front End developer often starting new projects and felt like an Express.js template with decent configuration for Vue.js was missing. Most tools for scaffolding out there are configured for SPAs and it's not always the use case. So I setted up this project that is kind of a merge between an express generated app and the configuration of the [vue-webpack template](https://github.com/vuejs-templates/webpack) for my future use. It has [Dust.js](http://www.dustjs.com/) as its template engine.
 
 ## How can I start a project using this ?
 
