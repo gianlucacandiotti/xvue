@@ -1,10 +1,10 @@
 # xVue
 
-This is an Express template I plan to use for my own projects. It's still work in progress but you can check it out.
+This is an Express template I plan to use for my own projects. It's still work in progress but you can check it out. You can also checkout my [xreact](https://github.com/gianlucacandiotti/xreact) template that uses almost the same configuration but supports React.js.
 
 ## Why did you do this ?
 
-I'm a Front End developer often starting new projects and really liked the vue-cli webpack template. The thing is it's configured for SPAs and it's not always the use case. So I setted up this project skeleton that is kind of a merge between an express generated app and the vue-webpack template. It has [Dust.js](http://www.dustjs.com/) as its template engine.
+I'm a Front End developer often starting new projects and felt like an Express.js template with decent configuration for Vue.js was missing. Most tools for scaffolding out there are configured for SPAs and it's not always the use case. So I setted up this project that is kind of a merge between an express generated app and the configuration of the vue-webpack template and the create-react-app project for my future use. It has [Dust.js](http://www.dustjs.com/) as its template engine.
 
 ## How can I start a project using this ?
 
@@ -17,14 +17,13 @@ You are all set to go. Now you may just run the commands below to start developi
 
 ## What's included
 
-These are the tasks included in the template. I'll just copy most of the descriptions from the [Vuejs Webpack template](https://github.com/vuejs-templates/webpack) since this is the template I merged with Express. If you want to know anything else about the tasks, about the folder structure or how to change or extend anything refer to their [docs](http://vuejs-templates.github.io/webpack/).
+These are the tasks included in the template. I'll just use most of the descriptions from the [Vuejs Webpack template](https://github.com/vuejs-templates/webpack) since this is the template I merged with Express. If you want to know anything else about the tasks, about the folder structure or how to change or extend anything refer to their [docs](http://vuejs-templates.github.io/webpack/).
 
 - `npm start`: Runs the express app on port 3000.
   - You can change the port in the .env file.
   - It will automatically load routes created on the routes folder, you just have to export an object with a format from each file. Use the once already created as reference.
 
 - `npm run dev`: First-in-class development experience.
-  - Start developing by going into your browser and hitting `APP_URL:8080`.
   - Webpack + `vue-loader` for single file Vue components.
   - State preserving hot-reload
   - State preserving compilation error overlay
